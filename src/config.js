@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connect = mongoose.connect("mongodb://localhost:27017/Login-tut");
+const connect = mongoose.connect("mongodb://localhost:27017/Login-tut") //"C:\Program Files\MongoDB\Server\8.0\bin\mongod.exe"    mongoose.connect("mongodb://localhost:27017/Login-tut");
 
 // Check database connected or not
 connect.then(() => {
@@ -22,6 +22,6 @@ const Loginschema = new mongoose.Schema({
 });
 
 // collection part
-const collection = new mongoose.model("users", Loginschema);
+const collection = new mongoose.model("user", Loginschema);
 
 module.exports = collection;
